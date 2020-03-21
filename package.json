@@ -1,0 +1,19 @@
+{
+  "name": "js-tdd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "\"https://github.com/geanfeltrin/js-tdd"
+  },
+  "keywords": [
+    "js",
+    "tdd"
+  ],
+  "author": "Gean Feltrin <geanfeltrin75@gmail.com>",
+  "license": "MIT"
+}
