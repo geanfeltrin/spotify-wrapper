@@ -15,5 +15,10 @@
     "tdd"
   ],
   "author": "Gean Feltrin <geanfeltrin75@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.1"
+  }
 }
