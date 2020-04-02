@@ -1,7 +1,7 @@
 {
-  "name": "js-tdd",
+  "name": "spotify-wrapper",
   "version": "1.0.0",
-  "description": "",
+  "description": "A wrapper to work with the Spotify Web API.",
   "main": "index.js",
   "scripts": {
     "lint": "npx eslint src/*.js",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "\"https://github.com/geanfeltrin/js-tdd"
+    "url": "\"https://github.com/geanfeltrin/spotify-wrapper"
   },
   "keywords": [
     "js",
