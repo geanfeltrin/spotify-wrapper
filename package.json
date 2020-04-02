@@ -4,9 +4,18 @@
   "description": "A wrapper to work with the Spotify Web API.",
   "main": "index.js",
   "scripts": {
-    "lint": "npx eslint src/*.js",
-    "pre-push": "npm run lint",
-    "test": "./node_modules/.bin/mocha tests/**/*.spec.js"
+     "lint": "./node_modules/.bin/eslint src/*.js",
+    "pre-push": "npm run lint && npm run test:coverage",
+    "test": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register",
+    "test:add": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register --watch",
+    "test:coverage": "nyc npm test"
+  },
+    "nyc": {
+    "functions": 80,
+    "lines": 80,
+    "check-coverage": true,
+    "reporter": ["text","html"],
+    "exclude": ["tests/**"]
   },
   "repository": {
     "type": "git",
@@ -26,6 +35,7 @@
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-plugin-import": "^2.20.1",
     "husky": "^4.2.3",
-    "mocha": "^7.1.1"
+    "mocha": "^7.1.1",
+    "nyc": "^15.0.0"
   }
 }
