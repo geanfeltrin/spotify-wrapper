@@ -36,12 +36,12 @@ describe('Spotify Wrapper', () => {
   });
 
   describe('Genaric Search', () => {
-    let promise;
     let fetchedStub;
+    let promise;
 
     beforeEach(() => {
       fetchedStub = sinon.stub(global, 'fetch');
-      fetchedStub.resolves({ json: () => {} });
+      fetchedStub.resolves({ json: () => ({ album: 'name' }) });
     });
 
     afterEach(() => {
@@ -73,10 +73,11 @@ describe('Spotify Wrapper', () => {
     });
 
     it('should return JSON data from the Promise', () => {
-      promise.resolves({ body: 'json' });
       const artists = search('Incubus', 'artist');
 
-      expect(artists.resolveValue).to.be.eql({ body: 'json' });
+      artists.then((data) => {
+        expect(data).to.be.eql({ album: 'name' });
+      });
     });
   });
 });
