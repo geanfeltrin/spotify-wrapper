@@ -10,13 +10,13 @@ import {
   searchArtists,
   searchTracks,
   searchPlaylists,
-} from '../src/main';
+} from '../src/search';
 
 global.fetch = require('node-fetch');
 
 chai.use(sinonChai);
 
-describe('Spotify Wrapper', () => {
+describe('Search', () => {
   describe('smoke-teste', () => {
     it('should exist the search method', () => {
       expect(search).to.be.a('function');
@@ -37,7 +37,6 @@ describe('Spotify Wrapper', () => {
 
   describe('Genaric Search', () => {
     let fetchedStub;
-    let promise;
 
     beforeEach(() => {
       fetchedStub = sinon.stub(global, 'fetch');
