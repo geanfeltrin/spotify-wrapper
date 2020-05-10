@@ -5,9 +5,11 @@
   "main": "src/index.js",
   "scripts": {
     "clear": "rimraf lib",
-    "build": "npx babel --out-dir lib src",
+    "build": "npm run clear && npx babel --out-dir lib src",
     "build:watch": "npm run build -- --watch",
     "build:umd": "webpack --output-filename spotify-wrapper.umd.js",
+    "build:umd:min": "webpack --output-filename spotify-wrapper.umd.min.js -p",
+    "build:all": "npm run build && npm run build:umd && npm run build:umd:min",
     "lint": "./node_modules/.bin/eslint src/*.js",
     "pre-push": "npm run lint && npm run test:coverage",
     "test": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register",
