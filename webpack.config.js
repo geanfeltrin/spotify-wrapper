@@ -6,8 +6,8 @@ module.exports = {
   mode: 'production',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    libraryTarget: 'umd',
     library: 'spotifyWrapper',
+    libraryTarget: 'umd',
   },
   devtool: 'source-map',
   module: {
@@ -15,6 +15,7 @@ module.exports = {
       {
         test: /\.m?js$/,
         exclude: /(node_modules|bower_components)/,
+        include: path.resolve(__dirname, 'src'),
         use: {
           loader: 'babel-loader',
           options: {

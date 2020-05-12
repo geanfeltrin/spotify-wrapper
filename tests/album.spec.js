@@ -4,7 +4,7 @@
 import chai, { expect } from 'chai';
 import sinon from 'sinon';
 import sinonChai from 'sinon-chai';
-import { getAlbum, getAlbums, getAlbumTracks } from '../src/album';
+import { getAlbum, getAlbums, getAlbumTracks } from '../src/index';
 
 global.fetch = require('node-fetch');
 

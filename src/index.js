@@ -2,8 +2,8 @@ import {
   search,
   searchAlbums,
   searchArtists,
-  searchTracks,
   searchPlaylists,
+  searchTracks,
 } from './search';
 
 import {
@@ -13,12 +13,12 @@ import {
 } from './album';
 
 
-module.exports = {
+export {
   search,
-  searchAlbums,
   searchArtists,
-  searchTracks,
+  searchAlbums,
   searchPlaylists,
+  searchTracks,
   getAlbum,
   getAlbums,
   getAlbumTracks,
