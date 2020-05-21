@@ -1,8 +1,8 @@
-import { API_URL } from './config';
+import { API_URL, HEADERS } from './config';
 import { toJSON } from './utils';
 
 
-export const getAlbum = (id) => fetch(`${API_URL}/albums/${id}`)
+export const getAlbum = (id) => fetch(`${API_URL}/albums/${id}`, HEADERS)
   .then(toJSON);
 
 
