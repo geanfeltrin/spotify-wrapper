@@ -5,6 +5,8 @@ import toJSON from './utils';
 
 import API_URL from './config';
 
+const fetch = require('node-fetch');
+
 
 export default class SpotifyWrapper {
   constructor(options) {
