@@ -6,7 +6,7 @@ module.exports = {
   mode: 'production',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    library: 'spotifyWrapper',
+    library: 'SpotifyWrapper',
     libraryTarget: 'umd',
   },
   devtool: 'source-map',
